@@ -207,4 +207,60 @@
 // operate("+",num1);
 // });
 
+// ...........
+
+
+function add(num1, num2) {
+    return num1 + num2;
+}
+// console.log(add(24214,24124));
+
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+// console.log(subtract(22,2));
+
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+// console.log(multiply(1,2));
+
+function divide(num1, num2) {
+    return num1 / num2;
+}
+// console.log(divide(22, 22));
+
+let num1 = "";
+let num2 = "";
+let operator = "";
+
+
+function operate(operator, num1, num2) {
+    if (operator === "+") {
+        return add(num1, num2);
+    }
+    if (operator === "-") {
+        return subtract(num1, num2);
+    }
+    if (operator === "*") {
+        return multiply(num1, num2);
+    }
+    if (operator === "/") {
+        return divide(num1, num2);
+    }
+}
+// console.log(operate("+", 2, 2));
+
+const displayContent = document.querySelector(".display-content");
+
+const d9 = document.querySelector(".d9");
+const d8 = document.querySelector(".d8");
+const d7 = document.querySelector(".d7");
+const d6 = document.querySelector(".d6");
+const d5 = document.querySelector(".d5");
+const d4 = document.querySelector(".d4");
+const d3 = document.querySelector(".d3");
+const d2 = document.querySelector(".d2");
+const d1 = document.querySelector(".d1");
+const d0 = document.querySelector(".d0");
 
