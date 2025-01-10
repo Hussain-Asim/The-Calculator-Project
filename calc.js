@@ -264,3 +264,32 @@ const d2 = document.querySelector(".d2");
 const d1 = document.querySelector(".d1");
 const d0 = document.querySelector(".d0");
 
+//Step 5 first Half line:
+//create functions that populates display when click digits button.
+//when i click d9 then it should populate display and in that if displayContent is 0 then replace it, else add it.
+
+//Step 5 next half line:
+// You should store the content of the display (the number) in a variable for use in the next step.
+//As from step 2: You’ll use these variables to update your display later.
+//means before using any operator, save the digits values in num1 variable.
+
+
+    d9.addEventListener("click", () => {
+        if (displayContent.textContent == 0) {
+            num1 = d9.textContent;
+            displayContent.textContent = num1;
+        } else {
+            num1 += d9.textContent;
+            displayContent.textContent = num1;
+        }
+    });
+    d8.addEventListener("click", () => {
+        if (displayContent.textContent == 0) {
+            num1 = d8.textContent;
+            displayContent.textContent = num1;
+        } else {
+            num1 += d8.textContent;
+            displayContent.textContent = num1;
+        }
+    });
+
