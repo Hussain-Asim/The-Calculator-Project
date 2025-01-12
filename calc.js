@@ -253,17 +253,6 @@ function operate(operator, num1, num2) {
 
 const displayContent = document.querySelector(".display-content");
 
-const d9 = document.querySelector(".d9");
-const d8 = document.querySelector(".d8");
-const d7 = document.querySelector(".d7");
-const d6 = document.querySelector(".d6");
-const d5 = document.querySelector(".d5");
-const d4 = document.querySelector(".d4");
-const d3 = document.querySelector(".d3");
-const d2 = document.querySelector(".d2");
-const d1 = document.querySelector(".d1");
-const d0 = document.querySelector(".d0");
-
 //Step 5 first Half line:
 //create functions that populates display when click digits button.
 //when i click d9 then it should populate display and in that if displayContent is 0 then replace it, else add it.
@@ -272,24 +261,70 @@ const d0 = document.querySelector(".d0");
 // You should store the content of the display (the number) in a variable for use in the next step.
 //As from step 2: You’ll use these variables to update your display later.
 //means before using any operator, save the digits values in num1 variable.
+// I am actually using forEach and event listeners instead of writing each button of code. which is a headache offcourse.
 
+let digits = document.querySelectorAll(".digits");
 
-    d9.addEventListener("click", () => {
+digits.forEach((digit) => {
+    digit.addEventListener("click", () => {
         if (displayContent.textContent == 0) {
-            num1 = d9.textContent;
+            num1 = digit.textContent;
             displayContent.textContent = num1;
         } else {
-            num1 += d9.textContent;
+            num1 += digit.textContent;
             displayContent.textContent = num1;
         }
-    });
-    d8.addEventListener("click", () => {
-        if (displayContent.textContent == 0) {
-            num1 = d8.textContent;
-            displayContent.textContent = num1;
-        } else {
-            num1 += d8.textContent;
-            displayContent.textContent = num1;
-        }
-    });
+    })
+})
+
+
+// d9.addEventListener("click", () => {
+//     if (displayContent.textContent == 0) {
+//         num1 = d9.textContent;
+//         displayContent.textContent = num1;
+//     } else {
+//         num1 += d9.textContent;
+//         displayContent.textContent = num1;
+//     }
+// });
+// d8.addEventListener("click", () => {
+//     if (displayContent.textContent == 0) {
+//         num1 = d8.textContent;
+//         displayContent.textContent = num1;
+//     } else {
+//         num1 += d8.textContent;
+//         displayContent.textContent = num1;
+//     }
+// });
+
+//Step 6: You’ll need to store the first and second numbers input by the user and then operate() on them when the user presses the = button, according to the operator that was selected between the numbers.
+// store num1 (any operator ) store num2 =(when pressed) runs operate and shows only output of that in displayContent.
+//After click any operator, whatever digit i click its value should be saved in num2 and only that should be shown in displayContent.
+//After num1, When click operator and then click any digit, that secondary digits should only be shown in displayContent.
+// when press operator, if any of the digits i.e d8 clicks then it should be only shown in displayContent. and numbers should be saved in num2.
+//
+
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const mul = document.querySelector(".mul");
+const division = document.querySelector(".division");
+
+// console.log(division.textContent);
+
+let operators = document.querySelectorAll(".operators");
+
+operators.forEach((operator) => {
+    operator.addEventListener("click", () => {
+
+        digits.forEach((digit) => {
+            digit.addEventListener("click", () => {
+                num2 += digit.textContent;
+                displayContent.textContent = num2;
+            })
+        })
+
+    })
+
+})
+
 
