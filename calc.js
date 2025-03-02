@@ -32,3 +32,4 @@ function operate(operator, a, b) {
     }
 }
 console.log(operate("+", 1, 2));
+
