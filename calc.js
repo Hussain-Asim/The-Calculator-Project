@@ -14,7 +14,7 @@ function divide(a, b) {
 
 let a = "";
 let operator = "";
-let b;
+let b = "";
 
 function operate(operator, a, b) {
     switch (operator) {
@@ -31,13 +31,13 @@ function operate(operator, a, b) {
             return divide(a, b);
     }
 }
-console.log(operate("+", 1, 2));
+// console.log(operate("+", 1, 2));
 
 
 // const btn = document.querySelectorAll(".btn");
-const display = document.querySelector(".display")
-
-
+const display = document.querySelector(".display");
+const btnAdd = document.querySelector(".btnAdd");
+const btnEqual = document.querySelector(".btnEqual");
 
 const btn9 = document.querySelector(".btn9")
 const btn8 = document.querySelector(".btn8")
@@ -50,24 +50,52 @@ const btn2 = document.querySelector(".btn2")
 const btn1 = document.querySelector(".btn1")
 const btn0 = document.querySelector(".btn0")
 
-//when click, populate display
-//add event listener, 
-//innerText of btn, save it on display content
-//if display content = 0 then replace first time, othewise + add.
-//save display number in variable for use of next step.
+//First number
 
+/*operator
+ if first a(number) is there from pair, then plus sign works, if not then not.
+*/
+
+//2nd number only works if there is first number in the pair and operator also set.
+
+/*press =, call operate function and update display with the output. 
+
+*/
 
 btn9.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn9.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
     if (display.textContent == 0) {
-        display.textContent = btn9.textContent;
-        a = display.textContent
+        a = btn9.textContent;
         console.log(a);
+        display.textContent = a;
     }
-    else {
-        display.textContent += btn9.textContent;
-        a = display.textContent
-        console.log(a);
+
+    if (a != "" && operator != "") {
+        b += btn9.textContent;
+        console.log(b);
+        display.textContent = b;
     }
+
+});
+
+btnAdd.addEventListener("click", () => {
+    if (a != "") {
+        operator = btnAdd.textContent;
+        console.log(operator);
+    }
+});
+
+btnEqual.addEventListener("click", () => {
+    display.textContent =
+        operate(operator, Number(a), Number(b));
+    console.log
+        (operate(operator, Number(a), Number(b)))
 });
 
 btn8.addEventListener("click", () => {
