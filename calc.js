@@ -84,10 +84,33 @@ btn9.addEventListener("click", () => {
 
 });
 
+/*
+(9 + 9) + 
+display first pair output 18 
+and consider 18 as first number, with along operator +
+*/
+
 btnAdd.addEventListener("click", () => {
-    if (a != "") {
+
+    if (a != "" && operator == "" && b == "") {
         operator = btnAdd.textContent;
         console.log(operator);
+    }
+
+    if (a != "" && operator != "" && b != "") {
+
+        display.textContent =
+            operate(operator, Number(a), Number(b));
+        console.log
+            (operate(operator, Number(a), Number(b)));
+
+        a = display.textContent;
+        console.log(a);
+
+        operator = btnAdd.textContent;
+        console.log(operator);
+
+        b = "";
     }
 });
 
@@ -95,7 +118,7 @@ btnEqual.addEventListener("click", () => {
     display.textContent =
         operate(operator, Number(a), Number(b));
     console.log
-        (operate(operator, Number(a), Number(b)))
+        (operate(operator, Number(a), Number(b)));
 });
 
 btn8.addEventListener("click", () => {
