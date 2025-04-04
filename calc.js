@@ -1,4 +1,4 @@
-function add(a, b) {
+function plus(a, b) {
     return a + b;
 }
 function subtract(a, b) {
@@ -16,10 +16,10 @@ let a = "";
 let operator = "";
 let b = "";
 
-function operate(operator, a, b) {
+function operate(a, operator, b) {
     switch (operator) {
         case "+":
-            return add(a, b);
+            return plus(a, b);
 
         case "-":
             return subtract(a, b);
@@ -31,12 +31,12 @@ function operate(operator, a, b) {
             return divide(a, b);
     }
 }
-// console.log(operate("+", 1, 2));
+// console.log(operate(1, "+", 6));
 
 
 // const btn = document.querySelectorAll(".btn");
 const display = document.querySelector(".display");
-const btnAdd = document.querySelector(".btnAdd");
+const btnPlus = document.querySelector(".btnPlus");
 const btnEqual = document.querySelector(".btnEqual");
 
 const btn9 = document.querySelector(".btn9")
@@ -70,18 +70,23 @@ btn9.addEventListener("click", () => {
         display.textContent = a;
     }
 
-    if (display.textContent == 0) {
+    if (a == "" && operator == "" && b == "") {
         a = btn9.textContent;
         console.log(a);
         display.textContent = a;
     }
 
-    if (a != "" && operator != "") {
+    if (a != "" && operator != "" && b != "") {
         b += btn9.textContent;
         console.log(b);
         display.textContent = b;
     }
 
+    if (a != "" && operator != "" && b == "") {
+        b = btn9.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
 });
 
 /*
@@ -90,151 +95,45 @@ display first pair output 18
 and consider 18 as first number, with along operator +
 */
 
-btnAdd.addEventListener("click", () => {
+btnPlus.addEventListener("click", () => {
 
     if (a != "" && operator == "" && b == "") {
-        operator = btnAdd.textContent;
+        operator = btnPlus.textContent;
         console.log(operator);
     }
 
     if (a != "" && operator != "" && b != "") {
-
-        display.textContent =
-            operate(operator, Number(a), Number(b));
-        console.log
-            (operate(operator, Number(a), Number(b)));
-
-        a = display.textContent;
+        a = operate(Number(a), operator, Number(b));
+        display.textContent = a;
         console.log(a);
-
-        operator = btnAdd.textContent;
+        operator = btnPlus.textContent;
         console.log(operator);
-
         b = "";
+        console.log(b);
+        
     }
+
 });
+
+//When Equal pressed, show output, then consider it as first operator
+//if display.textContent !="" then store it a .
+// 
+
 
 btnEqual.addEventListener("click", () => {
-    display.textContent =
-        operate(operator, Number(a), Number(b));
-    console.log
-        (operate(operator, Number(a), Number(b)));
-});
 
-btn8.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn8.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn8.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
+    if (a != "" && operator != "" && b != "") {
 
-btn7.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn7.textContent;
-        a = display.textContent
+        a = operate(Number(a), operator, Number(b));
+        display.textContent = a;
         console.log(a);
-    }
-    else {
-        display.textContent += btn7.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
+        operator = "";
+        console.log(operator);
+        b = "";
+        console.log(b);
+        
 
-btn6.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn6.textContent;
-        a = display.textContent
-        console.log(a);
     }
-    else {
-        display.textContent += btn6.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
 
-btn5.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn5.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn5.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
-
-btn4.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn4.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn4.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
-
-btn3.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn3.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn3.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
-
-btn2.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn2.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn2.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
-
-btn1.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn1.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn1.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-});
-
-btn0.addEventListener("click", () => {
-    if (display.textContent == 0) {
-        display.textContent = btn0.textContent;
-        a = display.textContent
-        console.log(a);
-    }
-    else {
-        display.textContent += btn0.textContent;
-        a = display.textContent
-        console.log(a);
-    }
 });
 
