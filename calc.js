@@ -36,7 +36,14 @@ function operate(a, operator, b) {
 
 // const btn = document.querySelectorAll(".btn");
 const display = document.querySelector(".display");
+
 const btnPlus = document.querySelector(".btnPlus");
+const btnSubtract = document.querySelector(".btnSubtract");
+const btnMul = document.querySelector(".btnMul");
+const btnDivide = document.querySelector(".btnDivide");
+
+const btnClear = document.querySelector(".btnClear");
+
 const btnEqual = document.querySelector(".btnEqual");
 
 const btn9 = document.querySelector(".btn9")
@@ -89,11 +96,248 @@ btn9.addEventListener("click", () => {
     }
 });
 
-/*
-(9 + 9) + 
-display first pair output 18 
-and consider 18 as first number, with along operator +
-*/
+btn8.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn8.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn8.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn8.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn8.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn7.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn7.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn7.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn7.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn7.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn6.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn6.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn6.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn6.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn6.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn5.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn5.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn5.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn5.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn5.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn4.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn4.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn4.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn4.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn4.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn3.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn3.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn3.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn3.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn3.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn2.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn2.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn2.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn2.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn2.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn1.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn1.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn1.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn1.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn1.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
+
+btn0.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        a += btn0.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a == "" && operator == "" && b == "") {
+        a = btn0.textContent;
+        console.log(a);
+        display.textContent = a;
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        b += btn0.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+
+    if (a != "" && operator != "" && b == "") {
+        b = btn0.textContent;
+        console.log(b);
+        display.textContent = b;
+    }
+});
 
 btnPlus.addEventListener("click", () => {
 
@@ -110,15 +354,87 @@ btnPlus.addEventListener("click", () => {
         console.log(operator);
         b = "";
         console.log(b);
-        
+
     }
 
 });
 
-//When Equal pressed, show output, then consider it as first operator
-//if display.textContent !="" then store it a .
-// 
+btnSubtract.addEventListener("click", () => {
 
+    if (a != "" && operator == "" && b == "") {
+        operator = btnSubtract.textContent;
+        console.log(operator);
+    }
+
+    if (a == "", operator == "", b == "") {
+        a = "-";
+        console.log(a);
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        a = operate(Number(a), operator, Number(b));
+        display.textContent = a;
+        console.log(a);
+        operator = btnSubtract.textContent;
+        console.log(operator);
+        b = "";
+        console.log(b);
+
+    }
+
+});
+
+btnMul.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        operator = btnMul.textContent;
+        console.log(operator);
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        a = operate(Number(a), operator, Number(b));
+        display.textContent = a;
+        console.log(a);
+        operator = btnMul.textContent;
+        console.log(operator);
+        b = "";
+        console.log(b);
+
+    }
+
+});
+
+btnDivide.addEventListener("click", () => {
+
+    if (a != "" && operator == "" && b == "") {
+        operator = btnDivide.textContent;
+        console.log(operator);
+    }
+
+    if (a != "" && operator != "" && b != "") {
+        a = operate(Number(a), operator, Number(b));
+        display.textContent = a;
+        console.log(a);
+        operator = btnDivide.textContent;
+        console.log(operator);
+        b = "";
+        console.log(b);
+
+    }
+
+});
+
+btnClear.addEventListener("click", () => {
+
+    display.textContent = 0;
+    a = "";
+    console.log(a);
+    operator = "";
+    console.log(operator);
+    b = "";
+    console.log(b);
+
+});
 
 btnEqual.addEventListener("click", () => {
 
@@ -131,7 +447,7 @@ btnEqual.addEventListener("click", () => {
         console.log(operator);
         b = "";
         console.log(b);
-        
+
 
     }
 
