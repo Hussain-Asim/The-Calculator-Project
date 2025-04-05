@@ -8,7 +8,12 @@ function multiply(a, b) {
     return a * b;
 }
 function divide(a, b) {
-    return a / b;
+    if (b == 0) {
+        display.textContent = "lmao";
+    }
+    else {
+        return a / b;
+    }
 }
 // console.log(divide(10,2));
 
@@ -348,8 +353,8 @@ btnPlus.addEventListener("click", () => {
 
     if (a != "" && operator != "" && b != "") {
         a = operate(Number(a), operator, Number(b));
-        display.textContent = a;
-        console.log(a);
+        display.textContent = parseFloat(a.toFixed(2));
+        console.log(a); 
         operator = btnPlus.textContent;
         console.log(operator);
         b = "";
@@ -359,16 +364,18 @@ btnPlus.addEventListener("click", () => {
 
 });
 
+//when pressing "-" if a and operator and b is "", it should be add as a.
+
 btnSubtract.addEventListener("click", () => {
 
     if (a != "" && operator == "" && b == "") {
         operator = btnSubtract.textContent;
-        console.log(operator);
+        console.log("Operator", operator);
     }
 
-    if (a == "", operator == "", b == "") {
+    if (a == "" && operator == "" && b == "") {
         a = "-";
-        console.log(a);
+        console.log("Part of a", a);
     }
 
     if (a != "" && operator != "" && b != "") {
@@ -441,15 +448,15 @@ btnEqual.addEventListener("click", () => {
     if (a != "" && operator != "" && b != "") {
 
         a = operate(Number(a), operator, Number(b));
-        display.textContent = a;
+        display.textContent = parseFloat(a.toFixed(2));
+        console.log(a);
+        a = "";
         console.log(a);
         operator = "";
         console.log(operator);
         b = "";
         console.log(b);
-
-
     }
 
 });
-
+// parseFloat(a.toFixed(2))
